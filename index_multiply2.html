@@ -71,12 +71,12 @@
               //   ["get", ["*", ["to-number", ["get", "measuredHeight"]], 2]],
               // ],
 
-              // measuredHeightの数値に2をかけたもの、もしくは50mの高い方を表示
-              // "fill-extrusion-height": [
-              //   "max",
-              //   ["*", ["to-number", ["get", "measuredHeight"]], 2],
-              //   5,
-              // ],
+              // measuredHeightの数値に2をかけたもの、もしくは5mの高い方を表示
+              "fill-extrusion-height": [
+                "max",
+                ["*", ["to-number", ["get", "measuredHeight"]], 2],
+                1,
+              ],
 
               //measuredHeight属性が入っている場合にはその高さか5mの高い方、measuredHeightがなければ建物の階数に3.66mをかけたものか5mを表示させるコード
               // "fill-extrusion-height": [
@@ -91,7 +91,7 @@
               // ],
 
               // original code
-              "fill-extrusion-height": ["get", "measuredHeight"],
+              // "fill-extrusion-height": ["get", "measuredHeight"],
             },
           },
         ],
